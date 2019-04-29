@@ -14,21 +14,34 @@ namespace Guessing_Game
 
             int random = rnd.Next(1, 10);
             Console.WriteLine(random);//display random number for test purposes
+            Console.WriteLine("I am thinkig of a number between 1 and 10: ");
 
-            //ask user to guess a number between 1 - 10:
-            Console.Write("Guess a number between 1 and 10: ");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-            if (random == userInput)
+            for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("\nCongrats");
-            }
-            else if (random > userInput)
-            {
-                Console.WriteLine("Higher");
-            }
-            else if (random < userInput)
-            {
-                Console.WriteLine("Lower");
+                //ask user to guess a number between 1 - 10:
+                Console.Write("Enter Guess #{0}: ", i + 1);
+                int userInput = Convert.ToInt32(Console.ReadLine());
+
+
+                if (i == 2)
+                {
+                    Console.WriteLine("Max number of tries reached");
+                    break;
+                }
+
+                if (random == userInput)
+                {
+                    Console.WriteLine("\nCongrats You Won");
+                    break;
+                }
+                else if (random > userInput)
+                {
+                    Console.WriteLine("Higher");
+                }
+                else if (random < userInput)
+                {
+                    Console.WriteLine("Lower");
+                }
             }
 
 

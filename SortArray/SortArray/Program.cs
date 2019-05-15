@@ -28,6 +28,7 @@ namespace SortArray
 
                     Console.Write(intArray[n] + ", ");
                 }
+
             }
 
             Console.Read();

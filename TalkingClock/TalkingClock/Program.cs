@@ -16,7 +16,7 @@ namespace TalkingClock
             string[] digits = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
             string[] ten = { "ten","twenty","thirty","fourty","fifty" };
 
-            string time = "10:33";
+            string time = "09:59";
             string[] timeSplit = time.Split(':');
             int hour = Convert.ToInt32(timeSplit[0]);
             int min = Convert.ToInt32(timeSplit[1]);
